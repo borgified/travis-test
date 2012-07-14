@@ -32,6 +32,7 @@ use Carp;
 use Getopt::Std;
 use Net::Ping::HTTP;
 use Time::HiRes qw(gettimeofday tv_interval);
+use Socket;
 
 $| = 1;
 my %opts;

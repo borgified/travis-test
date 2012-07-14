@@ -1,3 +1,5 @@
+#!/usr/bin/env perl
+
 use Test;
 
 BEGIN {plan tests => 7 , todo => [6,7]};
@@ -19,7 +21,7 @@ my $count = 0;
 # eval this code in case ps is not a happy camper on this platform
 eval {
   my @process = `ps -ef`; 
-  $count = grep /httpd/, @process;
+  $count = grep /apache2/, @process;
   my $rc = $pinger->ping("http://localhost");
   if ($rc >= 500) {
       croak();
