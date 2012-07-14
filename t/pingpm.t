@@ -1,8 +1,6 @@
-#!/usr/bin/env perl
-
 use Test;
 
-BEGIN {plan tests => 7 , todo => [6,7]};
+BEGIN {plan tests => 5};
 
 
 eval { require Net::Ping::HTTP; return 1;};
@@ -29,3 +27,4 @@ eval {
 };
 
 skip(!$count,$@,'');
+

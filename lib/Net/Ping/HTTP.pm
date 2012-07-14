@@ -47,7 +47,7 @@ sub new {
               @_,
               );
   
-    my $ua = new LWP::UserAgent("Net::Ping::HTTP - $VERSION");
+    my $ua = new LWP::UserAgent;
     $this{UA} = $ua;
     $this{UA}->timeout($this{TIMEOUT});
     if($this{PROXY}) {
