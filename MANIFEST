@@ -3,3 +3,4 @@ Makefile.PL
 lib/Net/Ping/HTTP.pm
 bin/pingwww
 README.md
+t/pingpm.t
