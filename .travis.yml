@@ -1,4 +1,6 @@
 language: perl
+install:
+  - echo $TRAVIS_BUILD_DIR
 perl:
   - "5.16"
     #  - "5.14"
