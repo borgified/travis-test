@@ -1,8 +1,8 @@
-language: perl
+language: c
 install:
   - echo $TRAVIS_BUILD_DIR
-perl:
-  - "5.16"
+#perl:
+#  - "5.16"
     #  - "5.14"
     #  - "5.12"
     #  - "5.10"
