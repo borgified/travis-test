@@ -1,4 +1,8 @@
-language: c
-before_install:
-  - cd $TRAVIS_BUILD_DIR
-  - pwd
+language: minimal
+env:
+  A=sohail/testbranch
+  B=$(echo $A | sed -e 's/\//-/')
+
+script:
+  - echo $A
+  - echo $B
