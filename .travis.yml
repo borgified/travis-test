@@ -4,5 +4,4 @@ env:
   B=$(echo $A | sed -e 's/\//-/')
 
 script:
-  - echo $A
-  - echo $B
+  - ./generate_apk.sh
