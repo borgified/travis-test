@@ -1,11 +1,10 @@
 version: 0.2
 
 env:
-  A: sohail/testbranch
-  B: $(echo $A | sed -e 's/\//-/')
+  variables:
+    A: "sohail/testbranch"
 
 phases:
   build:
     commands:
       - ./generate_apk.sh
-
