@@ -1,7 +1,8 @@
-language: minimal
+language: objective-c
 env:
   A=sohail/testbranch
   B=$(echo $A | sed -e 's/\//-/')
 
 script:
   - ./generate_apk.sh
+  - xcrun agvtool -h
