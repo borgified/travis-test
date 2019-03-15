@@ -1,8 +1,9 @@
 language: objective-c
 env:
-  A=sohail/testbranch
-  B=$(echo $A | sed -e 's/\//-/')
-
+  TARGET=$HOME/optimizely/objective-c-sdk
+install:
+  - mkdir $TARGET && pushd $TARGET && git init && git pull https://github.com/$TARGET && popd
 script:
-  - ./generate_apk.sh
-  - xcrun agvtool -h
+  - cd $TARGET
+  - xcrun agvtool what-marketing-version
+  - xcrun agvtool what-version
