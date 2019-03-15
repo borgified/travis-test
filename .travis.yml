@@ -4,6 +4,5 @@ env:
 install:
   - mkdir -p $HOME/$TARGET && pushd $HOME/$TARGET && git init && git pull https://github.com/$TARGET && popd
 script:
-  - cd $HOME/$TARGET
-  - xcrun agvtool what-marketing-version
-  - xcrun agvtool what-version
+  - cd $HOME/$TARGET && xcrun agvtool what-marketing-version
+  - cd $HOME/$TARGET && xcrun agvtool what-version
