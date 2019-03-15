@@ -1,9 +1,9 @@
 language: objective-c
 env:
-  TARGET=$HOME/optimizely/objective-c-sdk
+  TARGET=optimizely/objective-c-sdk
 install:
-  - mkdir -p $TARGET && pushd $TARGET && git init && git pull https://github.com/$TARGET && popd
+  - mkdir -p $HOME/$TARGET && pushd $HOME/$TARGET && git init && git pull https://github.com/$TARGET && popd
 script:
-  - cd $TARGET
+  - cd $HOME/$TARGET
   - xcrun agvtool what-marketing-version
   - xcrun agvtool what-version
