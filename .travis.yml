@@ -6,9 +6,11 @@ env:
     - HELLO=hello
     - BASED_ON_HELLO=blah/blah$HELLO
     - COLOR_RESET='\033[0m'
-    - COLOR_RED='\033[0;33m'
+    - COLOR_RED='\033[0;35m'
+    - COLOR_RE='\033[0;36m'
 script:
   - echo -e "${COLOR_RED}blah $BASED_ON_HELLO ${COLOR_RESET} lkjsdf"
+  - echo -e "${COLOR_RE}blah $BASED_ON_HELLO ${COLOR_RESET} lkjsdf"
   - pwd
   - cd $HOME
   - mkdir test
