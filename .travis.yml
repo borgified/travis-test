@@ -5,8 +5,8 @@ env:
   global:
     - HELLO=hello
     - BASED_ON_HELLO=blah/blah$HELLO
-    - COLOR_RESET='\e[0m'
-    - COLOR_RED='\e[31m'
+    - COLOR_RESET='\033[0m'
+    - COLOR_RED='\033[0;33m'
 script:
   - echo "${COLOR_RED}blah $BASED_ON_HELLO ${COLOR_RESET} lkjsdf"
   - pwd
