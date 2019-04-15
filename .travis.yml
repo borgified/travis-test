@@ -1,5 +1,7 @@
+language: minimal
 os: linux
 script:
+  - pwd
   - cd $HOME
   - mkdir test
   - cd test
