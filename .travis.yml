@@ -1,6 +1,12 @@
 language: minimal
 os: linux
+
+env:
+  - HELLO=hello
+  - BASED_ON_HELLO=blah/blah$HELLO
+
 script:
+  - echo $BASED_ON_HELLO
   - pwd
   - cd $HOME
   - mkdir test
