@@ -1,7 +1,8 @@
 language: minimal
 os: linux
 env:
-  - VERSION=$TRAVIS_BUILD_NUMBER
+  global:
+    - VERSION=$TRAVIS_BUILD_NUMBER
 
 stages:
   - name: stage1
