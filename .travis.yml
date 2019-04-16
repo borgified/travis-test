@@ -15,7 +15,7 @@ jobs:
       os: osx
       env:
         global:
-          - VERSION=1.0.1
+          - VERSION=$TRAVIS_BUILD_NUMBER
       install:
         - brew install hub
       script:
