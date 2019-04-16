@@ -6,6 +6,7 @@ COLOR_MAGENTA='\033[0;35m'
 COLOR_CYAN='\033[0;36m'
 MYREPO=${HOME}/workdir/${TRAVIS_REPO_SLUG}
 AUTOBRANCH=testing/mybranch${VERSION}
+GITHUB_USER=borgified
 
 rm -rf ${MYREPO}
 mkdir -p ${MYREPO}
