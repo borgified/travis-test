@@ -3,7 +3,7 @@ os: linux
 
 stages:
   - name: stage1
-    if: branch =~ /^prep/ AND type = pull_request
+    if: branch =~ /^prep/ AND type = push
   - name: stage2
     if: branch = master AND type = push AND env(RELEASE) = true
 
