@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-# this script expects the following environment variables defined in travis job
-# GITHUB_TOKEN - github api token with repo permissions
-# GITHUB_USER - github username that GITHUB_TOKEN is associated with
+# this script expects the following environment variables defined in travis job settings
+# GITHUB_TOKEN - github api token with repo permissions (display value in build log setting: OFF)
+# GITHUB_USER - github username that GITHUB_TOKEN is associated with (display value in build log setting: ON)
 
 COLOR_RESET='\033[0m'
 COLOR_MAGENTA='\033[0;35m'
