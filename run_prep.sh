@@ -22,7 +22,7 @@ function do_stuff {
   echo "test ${VERSION}" >> version
 }
 
-function upload_changes {
+function push_changes {
   pwd
   git commit -a -m "auto_branch_$VERSION" --author "optibot <optibot@users.noreply.github.com>"
   git push https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG} ${AUTOBRANCH}
