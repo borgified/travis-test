@@ -23,4 +23,4 @@ PR_URL=$(hub pull-request --no-edit)
 echo -e "${COLOR_CYAN}ATTENTION:${COLOR_RESET} review and merge ${COLOR_CYAN}${PR_URL}${COLOR_RESET}"
 echo "then to release to cocoapods use Travis CI's Trigger build with the following payload:"
 echo -e "${COLOR_MAGENTA}env:${COLOR_RESET}"
-echo -e "${COLOR_MAGENTA}  - COCOAPODS=true${COLOR_RESET}"
+echo -e "${COLOR_MAGENTA}  - RELEASE=true${COLOR_RESET}"
