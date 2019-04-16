@@ -5,7 +5,7 @@ stages:
   - name: stage1
     if: branch =~ /^prep/ AND type = pull_request
   - name: stage2
-    if: branch = master AND type = push
+    if: branch = master AND type = push AND env(RELEASE) = true
 
 jobs:
   include:
