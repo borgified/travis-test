@@ -16,8 +16,8 @@ git checkout -b ${AUTOBRANCH}
 echo "test ${VERSION}" >> version
 git config user.email "borgified@gmail.com"
 git config user.name "borgified"
-git commit -a -m "auto_branch_$VERSION: ${TRAVIS_REPO_SLUG}#${TRAVIS_PULL_REQUEST}"
+git commit -a -m "auto_branch_$VERSION"
 echo "we committed"
 git push https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG} ${AUTOBRANCH}
 PR_URL=$(hub pull-request --no-edit)
-echo -e "${COLOR_CYAN}ATTENTION:${COLOR_RESET} review and merge ${PR_URL} to continue..."
+echo -e "${COLOR_CYAN}ATTENTION:${COLOR_RESET} review and merge ${COLOR_CYAN}${PR_URL}${COLOR_RESET} to continue..."
