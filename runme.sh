@@ -18,5 +18,6 @@ git config user.name "borgified"
 git commit -a -m "a"
 echo "we committed"
 git push https://${CI_USER_TOKEN}@github.com/${TRAVIS_REPO_SLUG} ${AUTOBRANCH}
-PR_URL=$(hub pull-request --no-edit)
-echo -e "${COLOR_CYAN}ATTENTION:${COLOR_RESET} review and merge ${PR_URL} to continue..."
+#PR_URL=$(hub pull-request --no-edit)
+hub pull-request --no-edit
+#echo -e "${COLOR_CYAN}ATTENTION:${COLOR_RESET} review and merge ${PR_URL} to continue..."
