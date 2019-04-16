@@ -1,8 +1,5 @@
 language: minimal
 os: linux
-env:
-  global:
-    - VERSION=$TRAVIS_BUILD_NUMBER
 
 stages:
   - name: stage1
@@ -16,6 +13,8 @@ jobs:
       name: this is stage 1
       language: objective-c
       os: osx
+      env:
+        - VERSION=$TRAVIS_BUILD_NUMBER
       install:
         - brew install hub
       script:
@@ -25,5 +24,7 @@ jobs:
       name: this is stage 2
       language: minimal
       os: linux
+      env:
+        - VERSION=$TRAVIS_BUILD_NUMBER
       script:
         - ./run_release.sh
