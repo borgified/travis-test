@@ -26,7 +26,7 @@ function push_changes {
   git config user.email "optibot@users.noreply.github.com"
   git config user.name "${GITHUB_USER}"
   git commit -a -m "auto_branch_$VERSION"
-  git push -q https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG} ${AUTOBRANCH}
+  git push https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG} ${AUTOBRANCH}
   PR_URL=$(hub pull-request --no-edit)
   echo -e "${COLOR_CYAN}ATTENTION:${COLOR_RESET} review and merge ${COLOR_CYAN}${PR_URL}${COLOR_RESET}"
   echo "then to release to cocoapods use Travis CI's Trigger build with the following payload:"
