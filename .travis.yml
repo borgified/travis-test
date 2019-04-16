@@ -1,11 +1,13 @@
 language: minimal
 os: linux
+env:
+  - VERSION=$TRAVIS_BUILD_NUMBER
 
 stages:
   - name: stage1
     if: branch =~ /^prep/ AND type = push
   - name: stage2
-    if: env(RELEASE) = true
+    if: env(COCOAPODS) = true
 
 jobs:
   include:
@@ -13,16 +15,14 @@ jobs:
       name: this is stage 1
       language: objective-c
       os: osx
-      env:
-        - VERSION=$TRAVIS_BUILD_NUMBER
       install:
         - brew install hub
       script:
-        - ./runme.sh
+        - ./run_prep.sh
 
     - stage: stage2
       name: this is stage 2
       language: minimal
       os: linux
       script:
-        - echo "doing stage 2 things"
+        - ./run_release.sh
