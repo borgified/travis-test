@@ -3,9 +3,10 @@ os: linux
 
 stages:
   - name: stage1
-    if: branch =~ /^prep/ AND type = push
+    #if: branch =~ /^prep/ AND type = push
+    if: env(PREP) = true
   - name: stage2
-    if: env(COCOAPODS) = true
+    if: env(RELEASE) = true
 
 jobs:
   include:
