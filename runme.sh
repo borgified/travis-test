@@ -13,6 +13,7 @@ git clone https://$CI_USER_TOKEN@github.com/$TRAVIS_REPO_SLUG $MYREPO
 cd $MYREPO
 git checkout -b $AUTOBRANCH
 echo "test $VERSION" >> version
-git commit -a -m "a"
+git commit -a -m "a" --author "borgified <borgified@gmail.com>"
 git push https://$CI_USER_TOKEN@github.com/$TRAVIS_REPO_SLUG $AUTOBRANCH
-PR_URL=$(hub pull-request --no-edit) && echo "${COLOR_CYAN}ATTENTION:${COLOR_RESET} review and merge ${PR_URL} to continue..."
+PR_URL=$(hub pull-request --no-edit)
+echo -e "${COLOR_CYAN}ATTENTION:${COLOR_RESET} review and merge ${PR_URL} to continue..."
