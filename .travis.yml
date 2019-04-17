@@ -3,9 +3,9 @@ os: linux
 
 stages:
   - name: stage1
-    if: env(PREP) = true
+    if: env(PREP) = true and type = push
   - name: stage2
-    if: env(RELEASE) = true
+    if: env(RELEASE) = true and type = push
   - name: stage3
 
 jobs:
