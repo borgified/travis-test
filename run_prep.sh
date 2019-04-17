@@ -13,7 +13,7 @@ AUTOBRANCH=${GITHUB_USER}/prepareRelease${VERSION}
 
 function prep_workspace {
   mkdir -p ${MYREPO}
-  git clone https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG} ${MYREPO}
+  git clone -b ${TRAVIS_BRANCH} https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG} ${MYREPO}
   cd ${MYREPO}
   git checkout -b ${AUTOBRANCH}
 }
