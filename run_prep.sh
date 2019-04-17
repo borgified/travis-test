@@ -32,6 +32,7 @@ function push_changes {
   echo "then to release to cocoapods use Travis CI's Trigger build with the following payload:"
   echo -e "${COLOR_MAGENTA}env:${COLOR_RESET}"
   echo -e "${COLOR_MAGENTA}  - RELEASE=true${COLOR_RESET}"
+  echo "im on ${TRAVIS_BRANCH}"
 }
 
 function main {
