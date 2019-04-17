@@ -18,6 +18,7 @@ jobs:
       install:
         - brew install hub
       script:
+        - echo $TRAVIS_BRANCH
         - ./run_prep.sh
 
     - stage: stage2
