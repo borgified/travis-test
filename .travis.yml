@@ -3,9 +3,9 @@ os: linux
 
 stages:
   - name: stage1
-    if: env(PREP) = true and type = push
+    if: env(PREP) = true and type = api
   - name: stage2
-    if: env(RELEASE) = true and type = push
+    if: env(RELEASE) = true and type = api
   - name: stage3
     if: env(SKIP) = true
 
