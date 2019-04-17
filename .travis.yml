@@ -6,6 +6,7 @@ stages:
     if: env(PREP) = true
   - name: stage2
     if: env(RELEASE) = true
+  - name: stage3
 
 jobs:
   include:
@@ -29,3 +30,9 @@ jobs:
         - VERSION=4.0_${TRAVIS_BUILD_NUMBER}
       script:
         - ./run_release.sh
+
+    - stage: stage3
+      language: minimal
+      os: linux
+      script:
+        - echo "noop"
