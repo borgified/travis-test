@@ -7,6 +7,7 @@ stages:
   - name: stage2
     if: env(RELEASE) = true and type = push
   - name: stage3
+    if: env(SKIP) = true
 
 jobs:
   include:
