@@ -16,7 +16,7 @@ jobs:
       language: objective-c
       os: osx
       env:
-        - VERSION=4.0_${TRAVIS_BUILD_NUMBER}
+        - VERSION=4.0.${TRAVIS_BUILD_NUMBER}
       install:
         - brew install hub
       script:
@@ -28,7 +28,7 @@ jobs:
       language: minimal
       os: linux
       env:
-        - VERSION=4.0_${TRAVIS_BUILD_NUMBER}
+        - VERSION=4.0.${TRAVIS_BUILD_NUMBER}
       script:
         - ./run_release.sh
 
