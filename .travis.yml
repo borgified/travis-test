@@ -1,39 +1,4 @@
-language: minimal
-os: linux
-
-stages:
-  - name: stage1
-    if: env(PREP) = true and type = api
-  - name: stage2
-    if: env(RELEASE) = true and type = api
-  - name: stage3
-    if: env(SKIP) = true
-
-jobs:
-  include:
-    - stage: stage1
-      name: this is stage 1
-      language: objective-c
-      os: osx
-      env:
-        - VERSION=4.0.${TRAVIS_BUILD_NUMBER}
-      install:
-        - brew install hub
-      script:
-        - echo $TRAVIS_BRANCH
-        - ./run_prep.sh
-
-    - stage: stage2
-      name: this is stage 2
-      language: minimal
-      os: linux
-      env:
-        - VERSION=4.0.${TRAVIS_BUILD_NUMBER}
-      script:
-        - ./run_release.sh
-
-    - stage: stage3
-      language: minimal
-      os: linux
-      script:
-        - echo "noop"
+language: shell
+os: windows
+script:
+  - ls -al
