@@ -1,5 +1,6 @@
 language: cpp
 # Only Windows Server, version 1803 is currently supported.
+# https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility
 os: windows
 script:
   - echo $TRAVIS_OS_NAME
