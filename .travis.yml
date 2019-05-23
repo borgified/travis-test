@@ -4,5 +4,5 @@ os: windows
 script:
   - echo $TRAVIS_OS_NAME
   - docker version
-  - docker pull alpine
-    #  - docker pull mcr.microsoft.com/windows/servercore:1803
+  - docker build .
+    #  - docker pull microsoft/windowsservercore:1803

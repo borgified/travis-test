@@ -1,1 +1,1 @@
-FROM mcr.microsoft.com/windows/servercore:1803
+FROM microsoft/windowsservercore:1803
