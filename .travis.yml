@@ -4,5 +4,5 @@ os: windows
 script:
   - echo $TRAVIS_OS_NAME
   # https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility
-  - ver
   - docker version
+  - docker build .
