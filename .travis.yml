@@ -5,4 +5,4 @@ script:
   - echo $TRAVIS_OS_NAME
   # https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/version-compatibility
   - docker version
-  - docker build .
+  - docker pull mcr.microsoft.com/windows/servercore:1803
