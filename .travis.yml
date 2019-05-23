@@ -1,4 +1,4 @@
-language: shell
+language: cpp
 os: windows
 script:
-  - ls -al
+  - echo $TRAVIS_OS_NAME
